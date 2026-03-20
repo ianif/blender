@@ -22,6 +22,7 @@ struct bContext;
 struct ID;
 struct Scene;
 struct PointerRNA;
+struct Main;
 
 /* Names for builtin keying sets so we don't confuse these with labels/text,
  * defined in python script: `keyingsets_builtins.py`. */
@@ -86,7 +87,7 @@ enum class ModifyKeyMode {
   DELETE_KEY,
 };
 
-/** Return codes for errors (with Relative KeyingSets). */
+/** Return codes for keying-set operations. */
 enum class ModifyKeyReturn {
   SUCCESS = 0,
   /** Context info was invalid for using the Keying Set. */
